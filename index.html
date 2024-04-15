@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            background-image: url(https://png.pngtree.com/background/20211215/original/pngtree-modern-green-banner-background-abstract-simple-picture-image_1451512.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background-color: rgba(77, 154, 84, 0.192); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #fff; /* White text color */
+        }
+
+        .section input[type="text"],
+        .section input[type="number"] {
+            width: calc(100% - 10px);
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            color: #fff; /* White text color */
+        }
+
+        .section input[type="text"]::placeholder,
+        .section input[type="number"]::placeholder {
+            color: #ccc; /* Placeholder text color */
+        }
+
+        .section button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #04AA6D; /* Button background color */
+            color: #fff; /* Button text color */
+            cursor: pointer;
+        }
+
+        .section button:hover {
+            background-color: #218c5e; /* Button background color on hover */
+        }
+
+        .summary-container {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .summary-container h2 {
+            margin-top: 0;
+            color: #fff; /* White text color */
+        }
+
+        .summary-container p {
+            margin: 10px 0;
+        }
+
+        .summary-container span {
+            font-weight: bold;
+        }
+
+        .description {
+            color: #ccc; /* Description text color */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Budget Calculator</h1>
+        <div class="section-container">
+            <div id="incomeSection" class="section">
+                <h2>Add Income</h2>
+                <input type="text" id="incometype" placeholder="Income Type">
+                <input type="number" id="incomeAmount" placeholder="Amount">
+                <button onclick="addIncome()">Add Income</button>
+            </div>
+            <div id="expenditureSection" class="section">
+                <h2>Add Expenditure</h2>
+                <input type="text" id="expendituretype" placeholder="Expenditure Type">
+                <input type="number" id="expenditureAmount" placeholder="Amount">
+                <button onclick="addExpenditure()">Add Expenditure</button>
+            </div>
+        </div>
+        <div id="summary" class="summary-container">
+            <h2>Summary</h2>
+            <p>Total Income: <span id="totalIncome">0</span></p>
+            <p>Total Expenditure: <span id="totalExpenditure">0</span></p>
+            <p>Balance: <span id="balance">0</span></p>
+        </div>
+        <!-- <p class="description">This is a sample description.</p> -->
+    </div>
+
+    <script src="budjet.js"></script>
+</body>
+</html>
